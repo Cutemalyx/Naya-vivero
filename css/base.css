@@ -1,0 +1,41 @@
+/* -------------------------------RESET, VARIABLES Y TODAS LAS UTILIDADES BASICAS------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserrat;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+input {
+    font-family: 'Montserrat';
+    font-weight: 100;
+}
+
+/* VARIABLES CSS */
+:root {
+    --header-height: 90px;
+}
+
+/* COMPENSACION POR HEADER FIJO */
+main {
+    margin-top: 90px;
+}
+
+#inicio {
+    scroll-margin-top: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 3;
+}

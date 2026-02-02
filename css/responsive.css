@@ -1,0 +1,392 @@
+/* ---------MEDIA QUERIES PARA RESPONSIVE DESIGN - (Funcionan bien en todos los tamaños de dispositivos y de ventanas redimensionadas)-----*/
+/* TABLETS (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    .logo-header {
+        width: 90px;
+    }
+    
+    .barra-busqueda {
+        max-width: 400px;
+        margin: 0 15px;
+    }
+    
+    .acciones-header {
+        gap: 1.2rem;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-texto {
+        font-size: 1.1rem;
+    }
+
+    .titulo-catalogo {
+        font-size: 3rem;
+    }
+    
+    .grid-categorias {
+        gap: 20px;
+    }
+    
+    .categoria-info {
+        padding: 15px;
+    }
+    
+    .categoria-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .seccion-consejos .titulo-seccion {
+        font-size: 3rem;
+    }
+
+    .footer-principal > .contenedor {
+        gap: 30px;
+    }
+}
+
+/* TABLETS PEQUEÑAS Y CELULARES GRANDES (576px - 768px) */
+@media screen and (max-width: 768px) {
+    .contenedor-header {
+        padding: 8px 0;
+    }
+    
+    .logo-header {
+        width: 80px;
+    }
+    
+    .barra-busqueda {
+        max-width: 300px;
+    }
+    
+    .barra-busqueda input {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .btn-icono {
+        font-size: 18px;
+    }
+    
+    .acciones-header {
+        gap: 1rem;
+    }
+
+    .hero-contenido {
+        padding: 25px;
+        max-width: 90%;
+    }
+    
+    .hero-contenido h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-texto {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 12px 24px;
+        min-width: auto;
+    }
+
+    .grid-categorias {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .tarjeta-categoria > img {
+        height: 220px;
+    }
+
+    .contenedor-acordeon::before {
+        left: 30px;
+    }
+    
+    .item-acordeon:nth-child(odd),
+    .item-acordeon:nth-child(even) {
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    
+    .item-acordeon::before {
+        left: 30px;
+    }
+    
+    .item-acordeon:nth-child(odd) .cabecera-acordeon,
+    .item-acordeon:nth-child(even) .cabecera-acordeon {
+        text-align: left;
+    }
+    
+    .item-acordeon:nth-child(odd) h3,
+    .item-acordeon:nth-child(even) h3 {
+        justify-content: flex-start;
+    }
+    
+    .item-acordeon:nth-child(odd) h3::after {
+        order: 1;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    
+    .tarjeta-accesorios {
+        padding: 25px;
+    }
+    
+    .tarjeta-accesorios .titulo-catalogo {
+        font-size: 2rem;
+    }
+    
+    .tarjeta-accesorios .titulo-seccion {
+        font-size: 1.3rem;
+    }
+    
+    .tarjeta-accesorios::after {
+        bottom: 30px;
+        right: 30px;
+        font-size: 0.9rem;
+    }
+
+    .footer-principal > .contenedor {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .footer-columna {
+        flex: 0 0 calc(50% - 15px);
+        margin-bottom: 20px;
+    }
+    
+    .footer-columna:first-child {
+        flex: 0 0 100%;
+    }
+    
+    .footer-texto {
+        max-width: 100%;
+    }
+}
+
+/* CELULARES (480px - 576px) */
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 0 10px;
+    }
+    .contenedor-header {
+        flex-wrap: nowrap;
+    }
+    .logo-header {
+        width: 70px;
+        padding: 0;
+    }
+    .barra-busqueda {
+        flex: 0 0 auto;
+        max-width: 150px;
+        margin: 0 10px;
+    }
+    .barra-busqueda form {
+        position: relative;
+    }
+    .barra-busqueda input {
+        width: 100%;
+        padding: 8px 10px;
+        padding-right: 35px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    .barra-busqueda button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 35px;
+        padding: 0;
+        background: none;
+        color: #205632;
+        border-radius: 0 20px 20px 0;
+    }
+    .acciones-header {
+        gap: 0.8rem;
+    }
+    .seccion-hero {
+        min-height: 80vh;
+    }
+    .hero-contenido {
+        padding: 20px;
+        margin: 0 auto;
+        width: 95%;
+    }
+    .hero-contenido h1 {
+        font-size: 1.8rem;
+    }
+    .hero-texto {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .titulo-catalogo {
+        font-size: 2rem;
+    }
+    .titulo-seccion {
+        font-size: 1.3rem;
+    }
+    .subtitulo-seccion {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .tarjeta-categoria > img {
+        height: 180px;
+    }
+    .seccion-consejos .titulo-seccion {
+        font-size: 2rem;
+    }
+    .seccion-consejos .subtitulo-seccion {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .cabecera-acordeon {
+        padding: 15px 20px;
+    }
+    .cabecera-acordeon h3 {
+        font-size: 1.2rem;
+        gap: 10px;
+    }
+    .cabecera-acordeon h3::before {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+    .contenido-interior {
+        padding: 20px;
+    }
+    .contenido-interior p {
+        font-size: 0.95rem;
+    }
+    .enlace-consejo {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .footer-principal > .contenedor {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .footer-columna {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .footer-columna img {
+        width: 100px;
+    }
+    .footer-contacto p {
+        font-size: 0.9rem;
+    }
+    .whatsapp-burbuja {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    main {
+        margin-top: 70px;
+    }
+}
+
+/* CELULARES MUY PEQUEÑOS (hasta 480px) */
+@media screen and (max-width: 480px) {
+    .logo-header {
+        width: 60px;
+    }
+    .barra-busqueda {
+        max-width: 120px;
+        margin: 0 5px;
+    }
+    .barra-busqueda input {
+        padding: 6px 8px;
+        padding-right: 30px;
+        font-size: 11px;
+    }
+    .barra-busqueda button {
+        width: 30px;
+        font-size: 14px;
+    }
+    .btn-icono {
+        font-size: 16px;
+    }
+    .acciones-header {
+        gap: 0.6rem;
+    }
+    .hero-contenido h1 {
+        font-size: 1.6rem;
+    }
+    .hero-texto {
+        font-size: 0.85rem;
+    }
+    .item-acordeon:nth-child(odd),
+    .item-acordeon:nth-child(even) {
+        padding-left: 50px;
+    }
+    .item-acordeon::before {
+        left: 20px;
+        width: 15px;
+        height: 15px;
+    }
+    .tarjeta-accesorios {
+        padding: 20px;
+    }
+    .tarjeta-accesorios .titulo-catalogo {
+        font-size: 1.8rem;
+    }
+    .tarjeta-accesorios .titulo-seccion {
+        font-size: 1.2rem;
+    }
+    .tarjeta-accesorios .subtitulo-seccion {
+        font-size: 1rem;
+    }
+    .tarjeta-accesorios .imagen-accesorios {
+        height: 180px;
+    }
+    .footer-columna h4 {
+        font-size: 0.9rem;
+    }
+    .footer-links a,
+    .footer-texto,
+    .footer-contacto p {
+        font-size: 0.85rem;
+    }
+}
+
+/* DISPOSITIVOS CON PANTALLA VERTICAL*/
+@media screen and (max-height: 600px) and (orientation: portrait) {
+    .seccion-hero {
+        min-height: 100vh;
+    }
+    
+    .hero-contenido {
+        margin-top: 40px;
+    }
+}
+
+/*DISPOSITIVOS CON ALTA RESOLUCION*/
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi) {
+    .logo-header,
+    .tarjeta-categoria > img,
+    .tarjeta-accesorios .imagen-accesorios {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}

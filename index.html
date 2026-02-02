@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naya Plantas y Accesorios - Tu vivero online</title>
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--CONEXION CON ARCHIVO CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--PRECONEXION CON LA API DE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FUENTE MONTSERRAT-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!--FAVICON PARA LA PESTAÑA-->
+    <link rel="icon" href="https://img.icons8.com/fluency/96/000000/leaf.png" type="image/png">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <div class="contenedor contenedor-header">
+            <a href="#inicio" class="logo-enlace">
+                <img src="assets/logo.jpeg" alt="Naya Plantas y Accesorios" class="logo-header">
+            </a>
+            <!--BARRA DE BUSQUEDA-->
+            <div class="barra-busqueda" id="barraBusqueda">
+                <form action="catalogo.html" method="get">
+                    <input type="search" placeholder="Busca tus plantas o accesorios...">
+                    <button type="submit" aria-label="Hacer búsqueda" title="Buscar"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <!--ICONOS-->
+            <div class="acciones-header">
+                <a href="cuenta.html" class="btn-icono" aria-label="Cuenta" title="Mi cuenta"><i class="fas fa-user"></i></a>
+                <a href="carrito.html" class="btn-icono" aria-label="Carrito de compras" title="Carrito de compras"><i class="fas fa-shopping-cart"></i></a>
+                <button class="btn-icono btn-menu-hamburguesa" id="btnMenuHamburguesa" aria-label="Abrir menú de navegación"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+        <!--MENU LATERAL-->
+    <aside class="menu-lateral" id="menuLateral">
+        <div class="menu-lateral-contenido">
+            <button class="btn-cerrar-menu" id="btnCerrarMenu" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+            <nav class="nav-principal" id="navPrincipal">
+                <ul>
+                    <li><a href="#inicio" title="Inicio" class="nav-link">Inicio</a></li>
+                    <li class="menu-categorias">
+                        <a href="#catalogo" title="Catálogo" class="nav-link">Catálogo <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#ornamentales" title="Ornamentales">Ornamentales</a></li>
+                            <li><a href="#nativas" title="Nativas">Nativas</a></li>
+                            <li><a href="#frutales" title="Frutales">Frutales</a></li>
+                            <li><a href="#accesorios" title="Accesorios">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#consejos" class="nav-link">Consejos</a></li>
+                    <li><a href="#ayuda" class="nav-link">Ayuda</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-lateral-fondo" id="menuFondo"></div>
+    </aside>
+    <!--CONTENIDO DE LA PAGINA-->
+    <main>
+        <!--BANNER PRINCIPAL (HERO)-->
+        <section id="inicio" class="seccion-hero">
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <h1>Da vida a tus espacios con <span class="texto-destacado">Naya</span></h1>
+                    <p class="hero-texto">Plantas de calidad, cuidadosamente seleccionadas y listas para transformar tu hogar o jardín. Envíos seguros a todo el país.</p>
+                    <div class="hero-botones">
+                        <a href="catalogo.html" class="btn btn-primario">Explora el Catálogo</a>
+                        <a href="#consejos" class="btn btn-secundario">Aprende a Cuidarlas</a>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/plants-1.jpg" alt="Imagen de plantas decorativas" class="hero-imagen">
+        </section>
+        <!--SECCION DE CATALOGO-->
+        <section id="catalogo" class="seccion seccion-categorias">
+            <div class="contenedor">
+                <h1 class="titulo-catalogo"><a href="catalogo.html">Catálogo de plantas</a></h1>
+                <h2 class="titulo-seccion">Encuentra tu planta perfecta</h2>
+                <p class="subtitulo-seccion">Organizamos nuestras plantas para que encuentres lo que buscas fácilmente.</p>
+        <!--CATEGORIA DE LAS PLANTAS-->
+                <div class="grid-categorias">
+                    <article class="tarjeta-categoria" id="ornamentales">
+                        <img src="assets/ornamentales.jpg" alt="Plantas ornamentales" class="imagen-categoria-ornamentales">
+                        <a href="catalogo.html#ornamentales" class="enlace-categoria">
+                            <div class="categoria-info">
+                                <h3>Ornamentales</h3>
+                                <p>Plantas de interior y exterior para decorar y llenar de color tu vida. Perfectas para principiantes.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="tarjeta-categoria" id="nativas">
+                        <img src="assets/nativas.jpg" alt="Plantas nativas" class="imagen-categoria-nativas">
+                        <a href="catalogo.html#nativas" class="enlace-categoria">
+                            <div class="categoria-info">
+                                <h3>Nativas</h3>
+                                <p>Especies autóctonas que respetan el ecosistema local y requieren menos mantenimiento.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="tarjeta-categoria" id="frutales">
+                        <img src="assets/frutales.jpg" alt="Plantas frutales" class="imagen-categoria-frutales">
+                        <a href="catalogo.html#frutales" class="enlace-categoria">
+                            <div class="categoria-info">
+                                <h3>Frutales</h3>
+                                <p>Disfruta de cosechar tus propias frutas. Árboles y arbustos ideales para jardín o maceta grande.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--ACCESORIOS-->
+        <section id="accesorios" class="seccion seccion-accesorios">
+            <div class="contenedor">
+                <a href="catalogo.html" class="tarjeta-accesorios">
+                    <h1 class="titulo-catalogo">Catálogo de Accesorios</h1>
+                    <h2 class="titulo-seccion">Complementa el cuidado de tus plantas</h2>
+                        <p class="subtitulo-seccion">Encuentra todo lo esencial para que tus plantas crezcan sanas y hermosas...</p>
+                        <img src="assets/accesorios.jpg" alt="Accesorios para jardinería" class="imagen-accesorios">
+                    </a>
+                </div>
+            </section>
+    <!--SECCION INFORMATIVA-->
+    <section id="consejos" class="seccion seccion-consejos">
+        <div class="contenedor">
+            <div class="cabecera-consejos">
+                <h1 class="titulo-seccion">Consejos de Jardinería Naya</h1>
+                <h2 class="subtitulo-seccion">Aprende a cuidar tus plantas como un experto.</h2>
+            </div>
+            <div class="contenedor-acordeon">
+                <div class="item-acordeon" data-consejo="1">
+                    <div class="cabecera-acordeon">
+                        <h3>Riego Inteligente</h3>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="contenido-interior">
+                            <p>No todas las plantas necesitan la misma cantidad de agua. Te enseñamos a identificar las señales y crear un calendario de riego personalizado según el tipo de planta, estación del año y clima de tu región.</p>
+                            <a href="blog-riego.html" class="enlace-consejo">Ver guía completa <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon" data-consejo="2">
+                    <div class="cabecera-acordeon">
+                        <h3>Luz Adecuada</h3>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="contenido-interior">
+                            <p>Descubre cuánta luz necesita cada especie y cómo colocarlas en tu casa para que crezcan sanas y fuertes. Aprende a reconocer los síntomas de exceso o falta de luz en tus plantas.</p>
+                            <a href="blog-luz.html" class="enlace-consejo">Ver guía completa <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon" data-consejo="3">
+                    <div class="cabecera-acordeon">
+                        <h3>Trasplante Sin Estrés</h3>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="contenido-interior">
+                            <p>Guía paso a paso para cambiar de maceta a tu planta en el momento correcto y con los materiales ideales. Incluye técnicas para minimizar el shock del trasplante y asegurar una adaptación exitosa.</p>
+                            <a href="blog-trasplante.html" class="enlace-consejo">Ver guía completa <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--PIE DE PAGINA (FOOTER)-->
+        <footer class="footer-principal">
+            <div class="contenedor">
+                <!--INFORMACION Y REDES-->
+                <div class="footer-columna">
+                        <img src="assets/logo.jpeg" alt="Naya Plantas y Accesorios">
+                    <p class="footer-texto">Llevando la naturaleza a tu hogar desde 20XX. Plantas cultivadas con pasión y enviadas con cuidado.</p>
+                    <div class="redes-sociales">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro Pinterest" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Mira nuestros videos en TikTok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <!--ENLACES RAPIDOS-->
+                <div class="footer-columna">
+                    <h4>Compra</h4>
+                    <ul class="footer-links">
+                        <li><a href="#ornamentales">Plantas Ornamentales</a></li>
+                        <li><a href="#nativas">Plantas Nativas</a></li>
+                        <li><a href="#frutales">Plantas Frutales</a></li>
+                        <li><a href="#accesorios">Accesorios de todo tipo</a></li>
+                    </ul>
+                </div>
+                <!--MAS INFORMACIOB-->
+                <div class="footer-columna" id="ayuda">
+                    <h4>Ayuda</h4>
+                    <ul class="footer-links">
+                        <li><a href="quienes-somos.html">Quienes somos</a></li>
+                        <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="envios.html">Envíos y Devoluciones</a></li>
+                        <li><a href="contacto.html">Contacta con Nosotros</a></li>
+                    </ul>
+                </div>
+                <!--CONTACTO-->
+                <div class="footer-columna" id="contacto">
+                    <h4>Contacto</h4>
+                    <address class="footer-contacto">
+                        <p><i class="fas fa-map-marker-alt"></i> Direccion 123, Ciudad</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+57123456789">+57 123456789</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:hola@gmail.com">hola@gmail.com</a></p>
+                    </address>
+                    <h4 class="mt-2">Métodos de Pago</h4>
+                    <div class="medios-pago">
+                        <i class="fab fa-cc-visa" title="Visa"></i>
+                        <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                        <i class="fab fa-cc-paypal" title="PayPal"></i>
+                        <i class="fas fa-credit-card" title="Tarjeta"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="contenedor">
+                    <p>&copy; 2026 Naya Plantas y Accesorios. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+            <!--BURBUJA DE WHATSAPP-->
+        <a href="https://wa.me/57123456789?text=Hola%20Naya%20Plantas,%20me%20interesa%20saber%20más%20sobre..." 
+            class="whatsapp-burbuja" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Chatea con nosotros por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    <!--CONEXION CON EL ARCHIVO JS-->
+    <script src="js/script.js"></script>
+</body>
+</html>

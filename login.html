@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Naya Plantas y Accesorios</title>
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--CONEXION CON ARCHIVO CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--PRECONEXION CON LA API DE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FUENTE MONTSERRAT-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!--FAVICON PARA LA PESTAÑA-->
+    <link rel="icon" href="https://img.icons8.com/fluency/96/000000/leaf.png" type="image/png">
+</head>
+<body class="pagina-auth">
+    <!--HEADER SIMPLIFICADO-->
+    <header class="header auth">
+        <div class="contenedor contenedor-header">
+            <a href="index.html" class="logo-enlace">
+                <img src="assets/logo.jpeg" alt="Naya Plantas y Accesorios" class="logo-header">
+            </a>
+            <div class="acciones-header">
+                <button class="btn-icono" aria-label="Menú" title="Menú" onclick="window.location.href='index.html';">
+                    <i class="fas fa-home"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!--TARJETA DE LOGIN-->
+    <main>
+        <div class="contenedor-auth">
+            <h1>Iniciar Sesión</h1>
+            <h2>Accede a tu cuenta para realizar compras y ver tu historial</h2>
+            <form id="formulario-login" class="formulario-auth" action="#" method="POST">
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                </div>
+                <div class="campo-formulario">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
+                </div>
+                <div class="opciones-login">
+                    <label>
+                        <input type="checkbox" name="recordar"> Recordarme
+                    </label>
+                    <a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn-login">Iniciar Sesión</button>
+            </form>
+            <div class="separador">
+                <span>¿No tienes cuenta?</span>
+            </div>
+            <a href="register.html" class="btn-registro">Crear una cuenta nueva</a>
+            <div class="enlace-volver">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Volver a la página principal</a>
+            </div>
+        </div>
+    </main>
+    <!--FOOTER SIMPLIFICADO-->
+    <footer class="footer-auth">
+        <div class="contenedor">
+            <p>&copy; 2026 Naya Plantas y Accesorios. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!--BURBUJA DE WHATSAPP-->
+    <a href="https://wa.me/57123456789?text=Hola%20Naya%20Plantas,%20me%20interesa%20saber%20más%20sobre..." 
+        class="whatsapp-burbuja" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Chatea con nosotros por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!--CONEXION CON EL ARCHIVO JS-->
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('formulario-login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí iría la lógica de validación y envío
+            console.log('Formulario de login enviado');
+            // Por ahora solo redirigimos a la página principal
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+/* ---------------ESTILOS DEL LOGIN Y REGISTRO --------------- */
+body.pagina-auth {
+    background-color: #f9fbf8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+body.pagina-auth main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px 40px;
+}
+
+/* HEADER*/
+body.pagina-auth .header.auth {
+    background-color: #205632;
+    padding-right: 30px;
+    padding-left: 1%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.pagina-auth .header.auth .acciones-header {
+    gap: 1rem;
+}
+
+/* TARJETA DE LOGIN*/
+body.pagina-auth .contenedor-auth {
+    background-color: white;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgba(32, 86, 50, 0.2);
+    width: 600px;
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 0 auto;
+}
+
+body.pagina-auth .contenedor-auth:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(32, 86, 50, 0.25);
+}
+
+body.pagina-auth .contenedor-auth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #a8e6cf, #daff94);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+body.pagina-auth .contenedor-auth:hover::before {
+    transform: scaleX(1);
+}
+
+body.pagina-auth .contenedor-auth h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #205632;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+body.pagina-auth .contenedor-auth h2 {
+    font-size: 1.05rem;
+    color: #424443;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* FORMULARIOS */
+body.pagina-auth .formulario-auth {
+    margin-bottom: 25px;
+}
+
+body.pagina-auth .grupo-campos {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    body.pagina-auth .grupo-campos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+body.pagina-auth .campo-formulario {
+    margin-bottom: 25px;
+}
+
+body.pagina-auth .campo-formulario label {
+    display: block;
+    margin-bottom: 10px;
+    color: #205632;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+body.pagina-auth .campo-formulario input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #f9fbf8;
+}
+
+body.pagina-auth .campo-formulario input:focus {
+    outline: none;
+    border-color: #a8e6cf;
+    box-shadow: 0 0 0 4px rgba(168, 230, 207, 0.25);
+    background-color: white;
+}
+
+body.pagina-auth .campo-formulario input::placeholder {
+    color: #999;
+}
+
+body.pagina-auth .campo-formulario small {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* CHECKBOX Y OPCIONES */
+body.pagina-auth .opciones-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 30px;
+    font-size: 0.95rem;
+}
+
+body.pagina-auth .opciones-login label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+body.pagina-auth .opciones-login input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #205632;
+}
+
+body.pagina-auth .opciones-login a {
+    color: #2a6d3f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+body.pagina-auth .opciones-login a:hover {
+    color: #a8e6cf;
+    text-decoration: underline;
+}
+
+body.pagina-auth .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 25px 0 30px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+body.pagina-auth .checkbox-label input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #205632;
+    width: 18px;
+    height: 18px;
+}
+
+body.pagina-auth .checkbox-label a {
+    color: #2a6d3f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+body.pagina-auth .checkbox-label a:hover {
+    color: #a8e6cf;
+    text-decoration: underline;
+}
+
+/* BOTONES */
+body.pagina-auth .btn-login, 
+body.pagina-auth .btn-registro {
+    display: inline-block;
+    width: 100%;
+    padding: 18px;
+    background-color: #a8e6cf;
+    color: #205632;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 15px;
+    border: 2px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.pagina-auth .btn-login:hover, 
+body.pagina-auth .btn-registro:hover {
+    background-color: white;
+    color: #205632;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(168, 230, 207, 0.5);
+    border-color: #a8e6cf;
+}
+
+body.pagina-auth .separador {
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    color: #999;
+}
+
+body.pagina-auth .separador::before,
+body.pagina-auth .separador::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+body.pagina-auth .separador span {
+    padding: 0 15px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* ENLACE VOLVER */
+body.pagina-auth .enlace-volver {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(168, 230, 207, 0.4);
+}
+
+body.pagina-auth .enlace-volver a {
+    color: #4a7c59;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+body.pagina-auth .enlace-volver a:hover {
+    color: #205632;
+    gap: 15px;
+}
+
+body.pagina-auth .enlace-volver a i {
+    transition: transform 0.3s ease;
+}
+
+body.pagina-auth .enlace-volver a:hover i {
+    transform: translateX(-5px);
+}
+
+/* FOOTER SIMPLIFICADO */
+body.pagina-auth .footer-auth {
+    background-color: #205632;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+body.pagina-auth .footer-auth p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 7px 0;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media screen and (max-width: 768px) {
+    body.pagina-auth main {
+        padding: 30px 20px;
+        min-height: calc(100vh - 120px);
+    }
+    
+    body.pagina-auth .contenedor-auth {
+        padding: 40px 30px;
+        max-width: 100%;
+    }
+    
+    body.pagina-auth .contenedor-auth h1 {
+        font-size: 2.5rem;
+    }
+    
+    body.pagina-auth .contenedor-auth h2 {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    
+    body.pagina-auth .campo-formulario input {
+        padding: 14px 18px;
+    }
+    
+    body.pagina-auth .btn-login, 
+    body.pagina-auth .btn-registro {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+    
+    body.pagina-auth .opciones-login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body.pagina-auth main {
+        padding: 20px 15px;
+    }
+    
+    body.pagina-auth .contenedor-auth {
+        padding: 35px 25px;
+    }
+    
+    body.pagina-auth .contenedor-auth h1 {
+        font-size: 2.2rem;
+    }
+    
+    body.pagina-auth .contenedor-auth h2 {
+        font-size: 1rem;
+    }
+    
+    body.pagina-auth .campo-formulario input {
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+    
+    body.pagina-auth .btn-login, 
+    body.pagina-auth .btn-registro {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
